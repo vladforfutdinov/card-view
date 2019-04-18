@@ -43,13 +43,36 @@ body {
     color: #fff;
 }
 
-input[name=number] {
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input[name='number'],
+button[id='copy-button'] {
     font-family: monospace;
     font-size: 20px;
-    margin: 0 0 .5rem;
-    padding: .5em 0;
+    margin: 0;
     text-align: center;
     border: none;
-    border-radius: 7px;
+}
+
+input[name='number'] {
+    margin: 0 0 .5rem;
+    padding: .5em 0;
+    border-radius: 7px 0 0 7px;
     background: #fff;
+}
+
+button[id='copy-button'] {
+    width: 7em;
+    padding: .5em 0;
+    word-spacing: -.3em;
+    border-radius: 0 7px 7px 0;
+    color: #000;
+    background: #ccc;
+}
+button[id='copy-button']:disabled {
+    background: #888;
+    color: #666;
 }

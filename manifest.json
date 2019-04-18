@@ -1,15 +1,7 @@
 {
   "short_name": "Card view",
   "name": "Card view",
-  "icons": [
-    {
-      "src": "",
-      "sizes": "",
-      "type": ""
-    }
-  ],
   "start_url": "./",
-  "background_color": "",
-  "Theme_color": "",
-  "display": ""
+  "background_color": "#444",
+  "Theme_color": "royalblue"
 }
