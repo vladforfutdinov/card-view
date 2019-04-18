@@ -8,6 +8,7 @@
 }
 
 html, body {
+    font-family: monospace;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -68,11 +69,25 @@ button[id='copy-button'] {
     width: 7em;
     padding: .5em 0;
     word-spacing: -.3em;
-    border-radius: 0 7px 7px 0;
     color: #000;
+    border-radius: 0 7px 7px 0;
     background: #ccc;
 }
+
 button[id='copy-button']:disabled {
-    background: #888;
     color: #666;
+    background: #888;
+}
+
+.github a:visited,
+.github a {
+    display: inline-block;
+    padding: .3em .6em;
+    color: #ccc;
+}
+
+.github a:hover {
+    text-decoration: dashed;
+    color: #000;
+    background-color: #999;
 }
