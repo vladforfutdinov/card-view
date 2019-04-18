@@ -1,4 +1,4 @@
-# card-view
+# Card view emulator
 
 Show payment card emulation for read by payment apps.
 
@@ -17,4 +17,4 @@ Use your payment/card management mobile application for add card using camera.
 Tested on [Monobank](https://www.monobank.ua/?lang=uk), [GPay](https://pay.google.com/), [Portmone](https://www.portmone.com) apps.
 
 ### 3. Share link
-Click on `Copy link` to share card view.
+Click on `Copy link` to share current card view.
