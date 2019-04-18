@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Show payment card emulation for read by payment apps.">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Show payment card emulation for read by payment apps." name="Description">
 
     <title>Card view emulator</title>
 
-    <link rel="preload" href="./styles.css" as="style">
-    <link rel="preload" href="./script.js" as="script">
-    <link rel="prefetch" href="./webfont.woff" as="font">
-    <link rel="prefetch" href="./webfont.woff2" as="font">
+    <link as="style" href="./styles.css" rel="preload">
+    <link as="script" href="./script.js" rel="preload">
+    <link as="font" href="./webfont.woff" rel="prefetch">
+    <link as="font" href="./webfont.woff2" rel="prefetch">
 
-    <link rel="stylesheet" href="./styles.css">
+    <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
 <div class="holder">
@@ -20,8 +20,9 @@
         <div class="number" id="number"></div>
     </div>
     <form action="#">
-        <label>
-            <input autofocus id="number-input" maxlength="16" name="number" placeholder="card number" type="text"/>
+        <label aria-label="card number">
+            <input autofocus id="number-input" maxlength="16" name="number"
+                   placeholder="card number" type="text"/>
         </label>
     </form>
 </div>
