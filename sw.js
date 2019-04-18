@@ -9,6 +9,7 @@ importScripts('./cache-polyfill.js');
                 .then(function (cache) {
                     return cache.addAll([
                         './',
+                        './manifest.json',
                         './index.html',
                         './cache-polyfill.js',
                         './sw.js',

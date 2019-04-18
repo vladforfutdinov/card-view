@@ -1,0 +1,15 @@
+{
+  "short_name": "Card view",
+  "name": "Card view",
+  "icons": [
+    {
+      "src": "",
+      "sizes": "",
+      "type": ""
+    }
+  ],
+  "start_url": "./",
+  "background_color": "",
+  "Theme_color": "",
+  "display": ""
+}
