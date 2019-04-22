@@ -7,6 +7,10 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     font-family: monospace;
     width: 100%;
@@ -23,19 +27,27 @@ body {
     background: #444;
 }
 
+/* number view */
+.holder {
+    display: flex;
+    flex-direction: column;
+    min-width: var(--card-width);
+    --card-width: 472px;
+}
+
 .card {
     position: relative;
-    width: 472px;
-    height: 300px;
-    margin: 0 0 5em;
+    height: calc(var(--card-width) * .6356%);
+    padding: 63.56% 0 0;
     border-radius: 13px;
     background: royalblue;
+    justify-self: stretch;
 }
 
 .card .number {
-    font: 21px "Credit Card", monospace;
+    font: calc(var(--card-width) * .0445) "Credit Card", monospace;
     position: absolute;
-    top: 170px;
+    top: 57%;
     left: 0;
     width: 100%;
     text-align: center;
@@ -44,9 +56,34 @@ body {
     color: #fff;
 }
 
+@media screen and (min-width: 320px) and (max-width: 740px) {
+    @media (max-aspect-ratio: 3/2) {
+        .holder {
+            padding: 0 2%;
+            --card-width: 100%;
+        }
+
+        .card .number {
+            font-size: calc(var(--card-width) * .8);
+        }
+    }
+
+    @media (min-aspect-ratio: 3/2) {
+        .holder {
+            --card-width: 200px;
+        }
+
+        .card .number {
+            font-size: calc(var(--card-width) * .055);
+        }
+    }
+}
+
+/* number input */
 form {
     display: flex;
     justify-content: center;
+    padding: 5em 0;
 }
 
 input[name='number'],
@@ -77,6 +114,32 @@ button[id='copy-button'] {
 button[id='copy-button']:disabled {
     color: #666;
     background: #888;
+}
+
+@media screen and (max-width: 1024px) {
+    form {
+        flex-direction: column;
+    }
+
+    input[name='number'],
+    button[id='copy-button'] {
+        border-radius: 7px;
+    }
+
+    @media (min-aspect-ratio: 3/2) {
+        form {
+            padding: 2em 0;
+        }
+
+        button[id='copy-button'] {
+            font-size: 16px;
+        }
+    }
+}
+
+/* gitub link */
+.github {
+    margin: 0;
 }
 
 .github a:visited,
