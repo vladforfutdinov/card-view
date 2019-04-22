@@ -64,7 +64,7 @@ body {
         }
 
         .card .number {
-            font-size: calc(var(--card-width) * .8);
+            font-size: 4.4vw;
         }
     }
 
