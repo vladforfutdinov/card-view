@@ -1,5 +1,6 @@
-# Card view emulator
+![](screenshot.png)
 
+# Card view emulator
 Render payment card to read by payment apps.
 
 ## How to use
