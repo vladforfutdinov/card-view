@@ -30,7 +30,7 @@
         const value = getNormalized();
         const isValid = isNumberValid(value);
 
-        history.pushState(null, null, isValid ? `#${value}` : ' ');
+        history.replaceState(null, null, isValid ? `#${value}` : ' ');
         numberPlace.innerHTML = isValid ? getFormattedNumber(value) : 'invalid number'.toUpperCase();
         copyButton.disabled = !isValid;
     }
