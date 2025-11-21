@@ -31,22 +31,21 @@ body {
 
 /* number view */
 .holder {
-    display: flex;
-    flex-direction: column;
-    min-width: var(--card-width);
     --card-width: 472px;
     --github-icon-size: 3em;
     --github-icon-margin: calc(var(--card-width) * 0.03);
 
-    @media screen and (min-width: 320px) and (max-width: 740px) {
+    display: flex;
+    flex-direction: column;
+    min-width: var(--card-width);
+
+    @media screen and (max-width: 740px) {
         @media (max-aspect-ratio: 3/2) {
             padding: 0 2%;
             --card-width: 100%;
         }
         @media (min-aspect-ratio: 3/2) {
-            .holder {
-                --card-width: 200px;
-            }
+            --card-width: 200px;
         }
     }
 }
@@ -72,7 +71,7 @@ body {
         word-spacing: 0.5em;
         color: #fff;
 
-        @media screen and (min-width: 320px) and (max-width: 740px) {
+        @media screen and (max-width: 740px) {
             @media (max-aspect-ratio: 3/2) {
                 font-size: 4.4vw;
             }
@@ -91,6 +90,16 @@ body {
         margin: 0;
         width: var(--github-icon-size);
         height: var(--github-icon-size);
+
+        @media screen and (max-width: 740px) {
+            @media (max-aspect-ratio: 3/2) {
+                --github-icon-size: 8vw;
+            }
+
+            @media (min-aspect-ratio: 3/2) {
+                --github-icon-size: 3em;
+            }
+        }
 
         svg {
             width: 100%;
@@ -112,55 +121,50 @@ form {
     display: flex;
     justify-content: center;
     padding: 3em 0;
-}
+    margin: 0 auto;
 
-input[name="number"],
-button[id="copy-button"] {
-    font-family: monospace;
-    font-size: 20px;
-    margin: 0;
-    text-align: center;
-    border: none;
-}
-
-input[name="number"] {
-    margin: 0 0 0.5rem;
-    padding: 0.5em 0;
-    border-radius: 7px 0 0 7px;
-    background: #fff;
-}
-
-button[id="copy-button"] {
-    width: 7em;
-    padding: 0.5em 0;
-    word-spacing: -0.3em;
-    color: #000;
-    border-radius: 0 7px 7px 0;
-    background: #ccc;
-}
-
-button[id="copy-button"]:disabled {
-    color: #666;
-    background: #888;
-}
-
-@media screen and (max-width: 1024px) {
-    form {
+    @media screen and (max-width: 1024px) {
         flex-direction: column;
+        width: 18em;
     }
 
     input[name="number"],
     button[id="copy-button"] {
-        border-radius: 7px;
+        font-family: monospace;
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+        border: none;
     }
 
-    @media (min-aspect-ratio: 3/2) {
-        form {
-            padding: 2em 0;
-        }
+    input[name="number"] {
+        padding: 0.5em 0;
+        border-radius: 7px 0 0 7px;
+        background: #fff;
+    }
 
+    button[id="copy-button"] {
+        width: 7em;
+        padding: 0.5em 0;
+        word-spacing: -0.3em;
+        color: #000;
+        border-radius: 0 7px 7px 0;
+        background: #ccc;
+
+        &:disabled {
+            color: #666;
+            background: #888;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        input[name="number"] {
+            width: 100%;
+            border-radius: 7px 7px 0 0;
+        }
         button[id="copy-button"] {
-            font-size: 16px;
+            width: 100%;
+            border-radius: 0 0 7px 7px;
         }
     }
 }
